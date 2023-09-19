@@ -15,12 +15,12 @@ body{
 }
 
 .wrapper {
-    position: relative;
+    position: static;
     width: 100%;
 }
 
 .slider {
-    position: relative;
+    position: static;
     overflow: hidden;
     max-width: 50.625rem;
     height: auto;
@@ -42,7 +42,7 @@ body{
 }
 
 .slider-items input{
-    position: absolute;
+    display: none;
     visibility: hidden;
 }
 
@@ -73,7 +73,7 @@ body{
 
 /*Перемотка текста*/
 .content-box {
-    position: relative;
+    position: static;
     max-width: 23.125rem;
     overflow: hidden;
 }
@@ -110,7 +110,7 @@ body{
 /*Перемотка текста*/
 
 .slider-nav-item:hover{
-    border: 3px solid #BA7427;
+    border: 0.188rem solid #BA7427;
     background: transparent;
 }
 
@@ -141,7 +141,7 @@ body{
 @media (max-width: 680px) {
     .slider-nav {
         flex-direction: column;
-        gap: 10px;
+        gap: 0.625rem;
     }
 
     .label-box {

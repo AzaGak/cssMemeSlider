@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #a5c0c4;
+}
+
+.container {
+    margin: 3.125rem auto;
+    max-width: 50.625rem;
+    padding: 0 1.25rem;
+}
+
+.wrapper {
+    position: static;
+    width: 100%;
+}
+
+.slider {
+    position: static;
+    overflow: hidden;
+    max-width: 50.625rem;
+    height: auto;
+}
+
+.slider-items .item {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    transition: .7s;
+}
+
+.slider-items .item img{
+    max-width: 20%;
+    height: auto;
+    border-radius: 1.875rem;
+    border: 0.4375rem solid white;
+    margin-bottom: 0.625rem;
+}
+
+.slider-items input{
+    display: none;
+    visibility: hidden;
+}
+
+.slider-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.slider-nav-item {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border: 0.125rem solid #fff;
+    border-radius: 50%;
+    margin: 0.4375rem;
+    cursor: pointer;
+    transition: all .5s ease;
+    background: #4792B1;
+}
+
+.label-box {
+    display: flex;
+    gap: 0.9375rem;
+}
+
+/*Перемотка текста*/
+.content-box {
+    position: static;
+    max-width: 23.125rem;
+    overflow: hidden;
+}
+
+.content-content {
+    width: 500%;
+    display: flex;
+    gap: 15.625rem;
+    transition: all .5s ease;
+}
+
+.content-text {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 0.9375rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+#a1:checked ~ .slider-nav .content-content {
+    margin-left: 0;
+}
+
+#a2:checked ~ .slider-nav .content-content {
+    margin-left: -100%;
+}
+
+#a3:checked ~ .slider-nav .content-content {
+    margin-left: -200%;
+}
+
+#a4:checked ~ .slider-nav .content-content {
+    margin-left: -350%;
+}
+/*Перемотка текста*/
+
+.slider-nav-item:hover{
+    border: 0.188rem solid #BA7427;
+    background: transparent;
+}
+
+#a1:checked ~ .slider-nav label:nth-child(1),
+#a2:checked ~ .slider-nav label:nth-child(2),
+#a3:checked ~ .slider-nav label:nth-child(3),
+#a4:checked ~ .slider-nav label:nth-child(4) {
+    background: transparent;
+}
+
+
+#a1:checked ~ .item{
+    margin-left: 0;
+}
+
+#a2:checked ~ .item{
+    margin-left: -100%;
+}
+
+#a3:checked ~ .item{
+    margin-left: -200%;
+}
+
+#a4:checked ~ .item{
+    margin-left: -300%;
+}
+
+@media (max-width: 680px) {
+    .slider-nav {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .label-box {
+        order: 1;
+    }
+
+    .content-box {
+        order: 2;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
